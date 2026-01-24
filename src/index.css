@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+@import "tailwindcss";
+@theme {
+  --color-primary: #F9F9F9;
+  --color-midnight: #06091f;
+  --color-navy: #161a31;
+  --color-secondary: #1E1E1E;
+  --color-placebg: #F3F3F5;
+  --color-accent: #0D6EFD;
+  --color-whitesmoke: #F5F5F5;
+  --color-spanishgray: #C7C7C7;
+  --color-aqua: #33c2cc;
+  --color-mint: #57db96;
+  --color-royal: #5c33cc;
+  --color-lavender: #7a57db;
+  --color-fuchsia: #ca2f8c;
+  --color-orange: #cc6033;
+  --color-sand: #d6995c;
+  --color-coral: #ea4884;
+  --animate-orbit: orbit 50s linear infinite;
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg))
+        translateY(calc(var(--radius) * 1px))
+        rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-marquee-vertical: marquee-vertical 50s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+body {
+  background: #F9F9F9;
+  font-family: "Funnel Display", sans-serif;
+  color: #1E1E1E;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.c-space {
+  @apply sm:px-10 px-5 lg:px-15;
+}
+
+.hover-animation {
+  @apply hover:-translate-y-1 duration-200;
+}
+
+.section-spacing {
+  @apply min-h-screen mt-20 md:mt-30;
+}
+
+.text-heading {
+  @apply font-bold text-3xl md:text-4xl;
+}
+
+.headtext {
+  @apply mt-2 mb-2 text-xl;
+}
+
+.subtext {
+  @apply text-neutral-400 text-sm md:text-base text-pretty;
+}
+
+/* Navigation */
+.nav-ul {
+  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+}
+
+.nav-li {
+  @apply text-black hover:text-blue-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+}
+
+.nav-link {
+  @apply text-lg md:text-base hover:text-blue-500 transition-colors;
+}
+/* Button Components */
+.btn {
+  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
+}
+
+/* About Section - Minimal Custom CSS for Tailwind v4 */
+/* No custom animations needed - all handled by Framer Motion */
+
+@media (max-width: 640px) {
+  /* All styling is handled by Tailwind classes in the component */
+}
+
+/* ========================= */
+/* PROJECT SECTION */
+/* ========================= */
+
+/* Grid Layout Classes */
+.grid-1 {
+  @apply row-span-2 md:col-span-3 h-[20rem] md:h-full relative overflow-hidden;
+}
+
+.grid-2 {
+  @apply row-span-1 md:col-span-3 h-[20rem] md:h-full relative overflow-hidden;
+}
+
+.grid-3 {
+  @apply row-span-1 md:col-span-3 h-[20rem] md:h-full relative overflow-hidden;
+}
+
+.grid-4 {
+  @apply row-span-1 md:col-span-2 h-[20rem] md:h-full relative overflow-hidden;
+}
+
+.grid-5 {
+  @apply row-span-1 md:col-span-4 h-[20rem] md:h-full relative overflow-hidden;
+}
+
+/* Grid Color Themes */
+.grid-default-color {
+  @apply p-6 border-2 border-spanishgray from-whitesmoke to-white rounded-2xl shadow-sm;
+}
+
+.grid-special-color {
+  @apply p-6 border-2 border-spanishgray from-blue-50 to-white rounded-2xl shadow-sm;
+}
+
+.grid-black-color {
+  @apply p-6 border-2 border-spanishgray  rounded-2xl ;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5 {
+    @apply h-[22rem];
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5 {
+    @apply h-[24rem];
+  }
+}
+
+/* Services section */
+/* ========================= */
+/* SERVICES SECTION */
+/* ========================= */
+
+.services-section {
+  @apply relative min-h-screen flex items-center justify-center px-5 mt-5 overflow-hidden;
+}
+
+/* Center content */
+.services-center {
+  @apply text-center max-w-2xl z-10;
+}
+
+.services-title {
+  @apply text-4xl md:text-6xl font-bold leading-tight mt-20 text-secondary;
+}
+
+/* Pills */
+.services-pill {
+  @apply absolute px-5 py-2 rounded-full text-sm md:text-base
+  bg-blue-200 text-blue-900 font-medium;
+}
+
+/* Positioning + rotation (FINAL) */
+.pill-top {
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5.21deg);
+}
+
+.pill-left {
+  left: 12%;
+  top: 30%;
+  transform: rotate(6.8deg);
+}
+
+.pill-right {
+  right: 9%;
+  top: 42%;
+  transform: rotate(-9.11deg);
+}
+
+.pill-bottom-left {
+  left: 18%;
+  bottom: 15%;
+  transform: rotate(-10.71deg);
+}
+
+.pill-bottom-right {
+  right: 18%;
+  bottom: 13%;
+  transform: rotate(8deg);
+}
+
+/* Mobile refinement */
+@media (max-width: 768px) {
+  .pill-left {
+    left: 4%;
+    top: 35%;
+  }
+
+  .pill-right {
+    right: 4%;
+    top: 35%;
+  }
+
+  .pill-bottom-left{
+    left: 8%;
+    bottom: 15%;
+  }
+  .pill-bottom-right {
+    bottom: 15%;
+  }
+}
+
+/* Contact Section*/
+.field-label {
+  @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+}
+
+.field-input {
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-placebg transition duration-200 placeholder-neutral-500 border border-white/10 mt-2;
+}
+
+.field-input-focus {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+}
