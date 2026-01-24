@@ -39,7 +39,7 @@ const Project = () => {
       />
 
       {/* Projects Grid */}
-      <div className="px-15 grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[20rem] mt-8">
+      <div className="px-10 grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[20rem] mt-8">
         {projects[activeTab]?.map((project) => (
           <Card 
             key={project.id}
