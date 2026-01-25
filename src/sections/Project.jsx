@@ -4,44 +4,40 @@ import Card from "../components/Card";
 import { projects } from "../constants";
 
 const Project = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState("all");
 
-  // Tab configuration
   const tabs = [
-    { id: 'all', label: 'Featured Work' },
-    { id: 'painting', label: 'Painting' },
-    { id: 'ui-ux', label: 'UI/UX Design' },
-    { id: 'animation', label: 'Animation' },
-    { id: 'motion', label: 'Motion Graphics' },
-    { id: 'graphics', label: 'Graphics Design' },
+    { id: "all", label: "Featured Work" },
+    { id: "painting", label: "Painting" },
+    { id: "ui-ux", label: "UI/UX Design" },
+    { id: "animation", label: "Animation" },
+    { id: "motion", label: "Motion Graphics" },
+    { id: "graphics", label: "Graphics Design" },
   ];
 
   const handleProjectClick = (project) => {
-    // Navigate to project detail page
-    console.log('Clicked project:', project);
-    // window.location.href = `/project/${project.id}`;
-    // Or if using React Router: navigate(`/project/${project.id}`);
+    console.log("Clicked project:", project);
   };
 
   return (
     <section className="c-space section-spacing" id="projects">
       {/* Header */}
-      <h2 className="text-heading text-center mb-4">My Projects</h2>
+      <h2 className="text-heading text-center mb-3">My Projects</h2>
       <p className="text-center text-neutral-400 mb-8">
-        Explore my creative work across different categories
+        Explore my creative work across different disciplines
       </p>
 
-      {/* Sliding Tabs */}
-      <SlidingTabs 
-        tabs={tabs} 
-        activeTab={activeTab} 
-        onTabChange={setActiveTab} 
+      {/* Tabs */}
+      <SlidingTabs
+        tabs={tabs}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
       />
 
       {/* Projects Grid */}
-      <div className="px-10 grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[20rem] mt-8">
+      <div className="grid grid-cols-1 gap-4 mt-10 md:grid-cols-6 md:auto-rows-[18rem]">
         {projects[activeTab]?.map((project) => (
-          <Card 
+          <Card
             key={project.id}
             project={project}
             onClick={() => handleProjectClick(project)}

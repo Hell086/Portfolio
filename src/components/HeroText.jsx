@@ -10,7 +10,7 @@ const HeroText = () => {
   return (
     <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View */}
-      <div className="flex-col hidden md:flex c-space">
+      <div className="flex-col hidden md:flex c-space ">
         <motion.h1
           className="text-4xl font-medium"
           variants={variants}
@@ -38,7 +38,7 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-black text-secondary text-5xl"
+              className="font-black text-secondary  text-5xl"
             />
           </motion.div>
           <motion.p
@@ -99,7 +99,7 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-secondary text-5xl"
+              className="font-bold text-center text-secondary text-5xl"
             />
           </motion.div>
           <motion.p
@@ -121,7 +121,7 @@ const HeroText = () => {
               ease: "easeOut",
             }}
           >
-             <motion.button 
+             <motion.button
                          className="px-8 py-3 bg-transparent border-2 border-blue-600 rounded-full text-blue-600 font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
                          whileHover={{ scale: 1.05 }}
                          whileTap={{ scale: 0.95 }}

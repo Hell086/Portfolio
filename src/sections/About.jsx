@@ -50,18 +50,17 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen c-space section-spacing"
-    >
+      className="c-space section-spacing overflow-hidden">
       {/* Header */}
       <div className="mb-10 relative">
-        <h1 className="text-8xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center">
           Binay Shrestha
         </h1>
 
           {/* CTA */}
-            <div className="mt-30 relative flex flex-col items-center gap-8">
+            <div className="mt-8 relative flex flex-col items-center gap-8">
             <motion.button
-            className="mt-5 px-8 py-3 border-2 hover:cursor-pointer border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all"
+            className="mt-7 px-5 py-2 border-2 hover:cursor-pointer border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
