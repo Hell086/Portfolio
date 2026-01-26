@@ -9,9 +9,9 @@ const HeroText = () => {
   };
 
   return (
-    <div className="relative z-20 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text overflow-visible">
+    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text ">
       {/* Desktop View */}
-      <div className="hidden md:flex flex-col c-space overflow-visible">
+      <div className="hidden md:flex flex-col c-space ">
         <motion.h1
           className="text-4xl font-medium"
           variants={variants}
@@ -22,7 +22,7 @@ const HeroText = () => {
           Hi I'm Binay
         </motion.h1>
 
-        <div className="flex flex-col items-start overflow-visible">
+        <div className="flex flex-col items-start ">
           <motion.p
             className="text-5xl font-medium text-neutral-300"
             variants={variants}
@@ -56,7 +56,7 @@ const HeroText = () => {
           </motion.p>
 
           <motion.div
-            className="mt-6 pb-4 overflow-visible"
+            className="mt-6 pb-4 "
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -78,7 +78,7 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden flex flex-col space-y-6 overflow-visible">
+      <div className="md:hidden flex flex-col space-y-6 md:hidden">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
@@ -89,7 +89,7 @@ const HeroText = () => {
           Hi, I'm Binay
         </motion.p>
 
-        <div className="overflow-visible">
+        <div>
           <motion.p
             className="text-5xl font-black text-neutral-300"
             variants={variants}
@@ -123,7 +123,7 @@ const HeroText = () => {
           </motion.p>
 
           <motion.div
-            className="mt-8 pb-4 overflow-visible"
+            className="mt-8 pb-4 "
             variants={variants}
             initial="hidden"
             animate="visible"

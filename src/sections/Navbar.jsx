@@ -46,11 +46,12 @@ const Navbar = () => {
         py-2 sm:py-0">
             <a 
             href="/"
-            className="text-xl font-bold transition-colors text-black">
+            className="text-xl font-bold transition-colors text-secondary">
                 BINAY
             </a>
-            <button onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-black
+            <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex cursor-pointer text-secondary
             hover:text-blue-500 focus:outline-non sm:hidden">
                 <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} className="w-6 h-6" alt="toggle"/>
             </button>
