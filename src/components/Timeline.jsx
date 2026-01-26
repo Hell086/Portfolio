@@ -113,9 +113,9 @@ export const Timeline = ({ data }) => {
       </div>
       <div className="relative flex flex-col items-center ">
           <motion.button
-                  className="px-8 py-3 hover:cursor-pointer rounded-full bg-accent text-white hover:bg-blue-400 font-semibold "
+                  className="px-6 py-3 hover:cursor-pointer rounded-full bg-accent text-white hover:bg-blue-400 font-semibold "
                 >
-                  View My Resume
+                  View Resume
                 </motion.button>
       </div>
     </div>

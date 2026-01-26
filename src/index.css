@@ -150,7 +150,7 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 360px) {
   .grid-1,
   .grid-2,
   .grid-3,

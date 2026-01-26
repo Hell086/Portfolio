@@ -55,7 +55,7 @@ const Contact=()=>{
     }
   };
     return (
-        <section className="relative flex items-center c-space " id="contact">
+        <section className="relative flex items-center c-space section-spacing " id="contact">
             {showAlert && <Alert type={alertType} text={alertMessage} />}
             <div className="flex flex-col items-center justify-center w-full">
                 <h2 className="pb-8 text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 ">

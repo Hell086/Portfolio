@@ -50,7 +50,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="c-space section-spacing overflow-hidden">
+      className="c-space section-spacing ">
       {/* Header */}
       <div className="mb-10 relative">
         <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center">
@@ -102,7 +102,7 @@ const About = () => {
 
       {/* Description */}
       <div className="bg-neutral-900 rounded-lg p-6 sm:p-10">
-        <p className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl text-white font-semibold leading-tight">
+        <p className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white font-semibold leading-tight">
           I'm a versatile{' '}
           <span className="text-blue-600">
             designer who partners with founders to turn ideas into real products.
