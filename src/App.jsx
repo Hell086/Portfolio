@@ -9,7 +9,6 @@ import Contact from "./sections/Contact";
 import Project from "./sections/Project";
 import About from "./sections/About";
 import Service from "./sections/Service";
-import ProjectGallery from "./components/Projectgallery";
 import ProjectOverview from "./Projects/ProjectOverview";
 
 // All your existing sections composed as the Home page
