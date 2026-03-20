@@ -4,7 +4,9 @@ import { mySocials } from "../constants";
 
 const About = () => {
   const statsRef = useRef(null);
+  const headingRef = useRef(null);
   const isInView = useInView(statsRef, { once: true });
+  const isHeadingInView = useInView(headingRef, { once: true, margin: "0px 0px -50px 0px" });
 
   // Counter animation hook
   const useCounter = (end, duration = 2000) => {
@@ -52,50 +54,46 @@ const About = () => {
       id="about"
       className="c-space py-16 sm:py-20">
       {/* Header */}
-      <div className="mb-10 relative">
-        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center">
+      <div className="mb-10 relative" ref={headingRef}>
+        <motion.h1
+          className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           Binay Shrestha
-        </h1>
+        </motion.h1>
 
-          {/* CTA */}
-            <div 
-            className="mt-8 relative flex flex-col items-center gap-8">
-            <motion.button
+        {/* CTA */}
+        <div className="mt-8 relative flex flex-col items-center gap-8">
+          <motion.button
             className="mt-7 px-5 py-2 border-2 hover:cursor-pointer border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            
           >
             Let's chat
           </motion.button>
 
-        <div className="flex gap-2 sm:absolute sm:left-0 sm:top-0 sm:flex-col">
-        {mySocials.map((social, index) => (
-          <a href={social.href} key={index}
-          className="transition-all duration-300 ease-in-out hover:scale-110 inline-block"
-          style={{
-            filter: 'grayscale(100%) brightness(0.8)',
-            transition: 'all 0.3s ease-in-out'
-          }}
-
-           onMouseEnter={(e) => {
-              e.currentTarget.style.filter = 'brightness(0) saturate(100%) invert(38%) sepia(89%) saturate(2699%) hue-rotate(202deg) brightness(101%) contrast(98%)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'grayscale(100%) brightness(0.8)';
-            }}
-          >
-            <img 
-              src={social.icon} 
-              className="w-5 h-5" 
-              alt={social.name}
-            />
-          </a>
-        ))}
-      </div>
+          <div className="flex gap-2 sm:absolute sm:left-0 sm:top-0 sm:flex-col">
+            {mySocials.map((social, index) => (
+              <a
+                href={social.href}
+                key={index}
+                className="transition-all duration-300 ease-in-out hover:scale-110 inline-block"
+                style={{ filter: 'grayscale(100%) brightness(0.8)', transition: 'all 0.3s ease-in-out' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.filter = 'brightness(0) saturate(100%) invert(38%) sepia(89%) saturate(2699%) hue-rotate(202deg) brightness(101%) contrast(98%)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.filter = 'grayscale(100%) brightness(0.8)';
+                }}
+              >
+                <img src={social.icon} className="w-5 h-5" alt={social.name} />
+              </a>
+            ))}
+          </div>
 
           {/* Tagline */}
-          
           <p className="text-neutral-600 text-sm text-center sm:absolute sm:right-0 sm:bottom-0 sm:w-[200px] sm:text-right">
             An artist shaping stories through lines, colors, and feeling one artwork at a time.
           </p>
@@ -114,7 +112,7 @@ const About = () => {
 
         {/* Tech Stack */}
         <div className="mt-14">
-          <h3 className="text-white  text-xl sm:text-2xl md:text-3xl font-medium mb-8">
+          <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-medium mb-8">
             Tech Stack
           </h3>
 
@@ -151,8 +149,7 @@ const About = () => {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
                     <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                      {count}
-                      {stat.suffix}
+                      {count}{stat.suffix}
                     </div>
                     <div className="text-neutral-400 text-xs sm:text-sm mt-1">
                       {stat.label}

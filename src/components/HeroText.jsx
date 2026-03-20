@@ -13,7 +13,7 @@ const HeroText = () => {
       {/* Desktop View */}
       <div className="hidden md:flex flex-col">
         <motion.h1
-          className="text-4xl font-medium"
+          className="text-5xl font-medium"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -24,7 +24,7 @@ const HeroText = () => {
 
         <div className="flex flex-col items-start">
           <motion.p
-            className="text-5xl font-medium text-neutral-300"
+            className="text-6xl font-medium text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -41,12 +41,12 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-black text-secondary text-5xl"
+              className="font-black text-secondary text-6xl"
             />
           </motion.div>
 
           <motion.p
-            className="text-4xl font-medium text-neutral-300"
+            className="text-5xl font-medium text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -56,7 +56,7 @@ const HeroText = () => {
           </motion.p>
 
           <motion.div
-            className="mt-6 pb-4"
+            className="mt-8 pb-4"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -67,7 +67,7 @@ const HeroText = () => {
             }}
           >
             <motion.button
-              className="relative z-30 px-6 py-2 border-2 border-blue-600 rounded-full text-blue-600 font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
+              className="relative z-30 px-8 py-3 border-2 border-blue-600 rounded-full text-blue-600 text-lg font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
               id="projects"
@@ -79,7 +79,7 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden flex flex-col space-y-6">
+      <div className="md:hidden flex flex-col space-y-4">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
