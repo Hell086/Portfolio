@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { projects } from '../constants';
-import ProjectGallery from './components/ProjectGallery';
+import ProjectGallery from './ProjectGallery';
 
 // Flatten all category arrays and deduplicate by id
 const allProjects = Object.values(projects)
