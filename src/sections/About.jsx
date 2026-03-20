@@ -50,7 +50,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="c-space section-spacing ">
+      className="c-space py-16 sm:py-20">
       {/* Header */}
       <div className="mb-10 relative">
         <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-neutral-900 text-center">
@@ -58,13 +58,15 @@ const About = () => {
         </h1>
 
           {/* CTA */}
-            <div className="mt-8 relative flex flex-col items-center gap-8">
+            <div 
+            className="mt-8 relative flex flex-col items-center gap-8">
             <motion.button
             className="mt-7 px-5 py-2 border-2 hover:cursor-pointer border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            
           >
-            Let’s chat
+            Let's chat
           </motion.button>
 
         <div className="flex gap-2 sm:absolute sm:left-0 sm:top-0 sm:flex-col">

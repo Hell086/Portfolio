@@ -70,6 +70,7 @@ const HeroText = () => {
               className="relative z-30 px-6 py-2 border-2 border-blue-600 rounded-full text-blue-600 font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
+              id="projects"
             >
               View My Work
             </motion.button>
