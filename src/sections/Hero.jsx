@@ -5,7 +5,7 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
     <section
-      className="flex items-center justify-center md:items-center md:justify-start c-space min-h-screen "
+      className="flex items-center justify-center md:items-center md:justify-start c-space "
       id="home"
     >
       <HeroText />
