@@ -52,7 +52,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="c-space py-16 sm:py-20">
+      className="c-space section-spacing py-16 sm:py-20">
       {/* Header */}
       <div className="mb-10 relative" ref={headingRef}>
         <motion.h1

@@ -9,7 +9,7 @@ const HeroText = () => {
   };
 
   return (
-    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text">
+    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text c-space ">
       {/* Desktop View */}
       <div className="hidden md:flex flex-col">
         <motion.h1
