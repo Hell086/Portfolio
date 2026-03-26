@@ -8,6 +8,7 @@ import Footer from "./sections/Footer";
 import Contact from "./sections/Contact";
 import Project from "./sections/Project";
 import About from "./sections/About";
+import WorkedIn from "./sections/WorkedIn";
 import Service from "./sections/Service";
 import ProjectOverview from "./Projects/ProjectOverview";
 
@@ -17,6 +18,7 @@ const Home = () => (
     <Navbar />
     <Hero />
     <About />
+    <WorkedIn />
     <Service />
     <Project />
     <Experiences />

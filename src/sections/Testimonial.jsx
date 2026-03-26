@@ -33,7 +33,7 @@ const ReviewCard = ({ img, name, username, body }) => {
 
 export default function Testimonial() {
   return (
-    <div className="items-start mt-10 md:mt-15 c-space section-spacing">
+    <div className="items-start mt-10 md:mt-15 c-space ">
       <h2 className="text-center text-3xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-2">
         Hear From My Clients
         </h2>

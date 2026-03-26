@@ -66,11 +66,13 @@ const HeroText = () => {
               ease: "easeOut",
             }}
           >
-            <motion.button
+        <motion.button
               className="relative z-30 px-8 py-3 border-2 border-blue-600 rounded-full text-blue-600 text-lg font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
-              id="projects"
+              onClick={() =>
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View My Work
             </motion.button>

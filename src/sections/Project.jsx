@@ -20,7 +20,7 @@ const Project = () => {
   };
 
   return (
-    <section className="c-space section-spacing" id="projects">
+    <section className="c-space section-spacing " id="projects">
       {/* Header */}
       <h2 className="text-heading text-center mb-3">My Projects</h2>
       <p className="text-center text-neutral-400 mb-8">
