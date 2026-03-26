@@ -17,17 +17,26 @@ export const mySocials = [
 ];
 
 export const experiences = [
-  {
-    worked: "In Milan Tara",
-    job: "Graphic Designer",
-    date: "2024-2025",
+   {
+    worked: "Freelance",
+    job: "Artist",
+    date: "2018-Present",
     contents: [
-      "Designed visual templates for Starmap and Momentmap, maintaining brand consistency and visual clarity.",
-      "Created reusable design systems and layouts in Adobe Illustrator to support product presentation and marketing needs.",
-      "Worked closely with the team to refine designs based on product requirements and feedback.",
+      "I began my professional artistic journey in 2018, focusing on commission-based artworks that allowed me to connect directly with collectors and art enthusiasts. Over time, I expanded my practice, creating not only personal work but also mural artworks that brought spaces to life with colors, form, and storytelling. Each piece I created was a step in refining my style and understanding what resonates with people.",
+      "Along the way, I collaborated with fellow artists on various projects, exchanging ideas and pushing creative boundaries. Through selling my art and completing commissions, I was able to turn my passion into a sustainable career while building a supportive community that follows and values my artistic growth. This journey has been a blend of exploration, collaboration, and dedication, shaping me into the professional artist I am today.",
     ],
   },
-  {
+    {
+    worked: "In Himalaya Robotics Club",
+    job: "Graphic Designer",
+    date: "2025-Present",
+    contents: [
+      "Design graphic posters for social media to promote events, workshops, and club activities.",
+      "Create visually engaging layouts aligned with the club's technical and innovative identity.",
+      "Collaborate with team members to communicate ideas clearly through effective visual design.",
+    ],
+  },
+    {
     worked: "In Project Abhaya",
     job: "UI/UX & Graphic Designer (Internship)",
     date: "Aug 25 - Dec 25 2025",
@@ -40,24 +49,15 @@ export const experiences = [
     ],
   },
   {
-    worked: "In Himalaya Robotics Club",
+    worked: "In Milan Tara",
     job: "Graphic Designer",
-    date: "2025-Present",
+    date: "2024-2025",
     contents: [
-      "Design graphic posters for social media to promote events, workshops, and club activities.",
-      "Create visually engaging layouts aligned with the club's technical and innovative identity.",
-      "Collaborate with team members to communicate ideas clearly through effective visual design.",
+      "Designed visual templates for Starmap and Momentmap, maintaining brand consistency and visual clarity.",
+      "Created reusable design systems and layouts in Adobe Illustrator to support product presentation and marketing needs.",
+      "Worked closely with the team to refine designs based on product requirements and feedback.",
     ],
-  },
-  {
-    worked: "Freelance",
-    job: "Artist",
-    date: "2018-Present",
-    contents: [
-      "I began my professional artistic journey in 2018, focusing on commission-based artworks that allowed me to connect directly with collectors and art enthusiasts. Over time, I expanded my practice, creating not only personal work but also mural artworks that brought spaces to life with colors, form, and storytelling. Each piece I created was a step in refining my style and understanding what resonates with people.",
-      "Along the way, I collaborated with fellow artists on various projects, exchanging ideas and pushing creative boundaries. Through selling my art and completing commissions, I was able to turn my passion into a sustainable career while building a supportive community that follows and values my artistic growth. This journey has been a blend of exploration, collaboration, and dedication, shaping me into the professional artist I am today.",
-    ],
-  },
+  }, 
 ];
 
 export const reviews = [
