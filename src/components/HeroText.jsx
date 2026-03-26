@@ -9,7 +9,7 @@ const HeroText = () => {
   };
 
   return (
-    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text c-space ">
+    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text c-space">
       {/* Desktop View */}
       <div className="hidden md:flex flex-col">
         <motion.h1
@@ -60,13 +60,9 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{
-              delay: 2,
-              duration: 0.6,
-              ease: "easeOut",
-            }}
+            transition={{ delay: 2, duration: 0.6, ease: "easeOut" }}
           >
-        <motion.button
+            <motion.button
               className="relative z-30 px-8 py-3 border-2 border-blue-600 rounded-full text-blue-600 text-lg font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
@@ -94,7 +90,7 @@ const HeroText = () => {
 
         <div>
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -111,7 +107,7 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-center text-secondary text-5xl"
+              className="font-bold text-center text-secondary text-4xl"
             />
           </motion.div>
 
@@ -130,11 +126,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{
-              delay: 2,
-              duration: 0.6,
-              ease: "easeOut",
-            }}
+            transition={{ delay: 2, duration: 0.6, ease: "easeOut" }}
           >
             <motion.button
               className="relative z-30 px-6 py-2 bg-transparent border-2 border-blue-600 rounded-full text-blue-600 font-semibold hover:cursor-pointer hover:bg-blue-600 hover:text-white transition-all"
