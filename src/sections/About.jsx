@@ -70,6 +70,9 @@ const About = () => {
             className="mt-7 px-5 py-2 border-2 hover:cursor-pointer border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+             onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+              }
           >
             Let's chat
           </motion.button>
