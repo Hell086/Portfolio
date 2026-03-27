@@ -1,79 +1,73 @@
-import {useState} from "react";
-import {motion} from "motion/react";
-function Navigation()
-{
-    return (
-        <ul className="nav-ul">
-            <li className="nav-li">
-                <a className="nav-link" href="#home">
-                    Home
-                </a>
-            </li>
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
-            <li className="nav-li">
-                <a className="nav-link" href="#about">
-                    About
-                </a>
-            </li>
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
-            <li className="nav-li">
-                <a className="nav-link" href="#services">
-                    Services
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#projects">
-                    Projects
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#contact">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    )
+function Navigation({ onLinkClick }) {
+  return (
+    <ul className="nav-ul">
+      {navLinks.map((link) => (
+        <li key={link.href} className="nav-li">
+          <a className="nav-link" href={link.href} onClick={onLinkClick}>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }
+
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  return ( 
-  <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg
-  bg-primary/40">
-    <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between
-        py-2 sm:py-0">
-            <a 
-            href="/"
-            className="text-xl font-bold transition-colors text-secondary">
-                BINAY
-            </a>
-            <button 
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+      <div className="mx-auto c-space max-w-7xl">
+        <div className="flex items-center justify-between py-2 sm:py-0">
+          <a href="/" className="text-xl font-bold transition-colors text-secondary">
+            BINAY
+          </a>
+
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-secondary
-            hover:text-blue-500 focus:outline-non sm:hidden">
-                <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} className="w-6 h-6" alt="toggle"/>
-            </button>
-            <nav className="hidden sm:flex">
-                <Navigation />
-            </nav>
-            </div>
-    </div>
-    {isOpen && (
-    <motion.div className="block overflow-hidden text-center 
-    sm:hidden"
-    initial={{ opacity: 0, x: -10}}
-    animate={{ opacity: 1, x:0}}
-    style={{ maxHeight: "100vh"}}
-    transition={{ duration: 1}}
-    >
-        <nav className="pb-5">
+            className="flex cursor-pointer text-secondary hover:text-blue-500 focus:outline-none sm:hidden"
+          >
+            <img
+              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+              className="w-6 h-6"
+              alt="toggle"
+            />
+          </button>
+
+          <nav className="hidden sm:flex">
             <Navigation />
-        </nav>
-    </motion.div>
-    )}
-  </div>
+          </nav>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="block overflow-hidden text-center sm:hidden"
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            style={{ maxHeight: "100vh" }}
+            transition={{ duration: 0.3 }}
+          >
+            <nav className="pb-5">
+              <Navigation onLinkClick={() => setIsOpen(false)} />
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
