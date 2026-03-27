@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 const HeroText = () => {
   const words = ["Artist", "Designer", "Animator"];
   const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: -30 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -17,7 +17,7 @@ const HeroText = () => {
           variants={variants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 1 }}
+          transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
         >
           Hi I'm Binay
         </motion.h1>
@@ -28,16 +28,16 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
           >
-            A Designer <br/> Dedicated to Crafting
+            A Designer <br /> Dedicated to Crafting
           </motion.p>
 
           <motion.div
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
           >
             <FlipWords
               words={words}
@@ -50,7 +50,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 1.8, duration: 0.6, ease: "easeOut" }}
           >
             Design Solutions
           </motion.p>
@@ -77,46 +77,49 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden flex flex-col items-center space-y-4">
+      <div className="md:hidden flex flex-col items-center">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 1 }}
+          transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
         >
           Hi, I'm Binay
         </motion.p>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center w-full">
           <motion.p
-            className="text-4xl font-black text-neutral-300 text-center"
+            className="text-4xl font-black text-neutral-300 text-center mt-4"
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
           >
             A Designer <br /> Dedicated to Crafting
           </motion.p>
 
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          >
-            <FlipWords
-              words={words}
-              className="font-bold text-center text-secondary text-4xl"
-            />
-          </motion.div>
+          {/* Fixed height container prevents layout shift from FlipWords */}
+          <div className="h-14 flex items-center justify-center w-full overflow-hidden">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
+            >
+              <FlipWords
+                words={words}
+                className="font-bold text-center text-secondary text-4xl"
+              />
+            </motion.div>
+          </div>
 
           <motion.p
             className="text-4xl font-black text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 1.8, duration: 0.6, ease: "easeOut" }}
           >
             Design Solutions
           </motion.p>
