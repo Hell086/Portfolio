@@ -73,7 +73,7 @@ body {
 
 /* Add this new class */
 .hero-section {
-  min-height: 95dvh;
+  min-height: 100svh;
 }
 
 .text-heading {
