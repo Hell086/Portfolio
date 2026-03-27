@@ -9,9 +9,9 @@ const HeroText = () => {
   };
 
   return (
-    <div className="z-10 text-center md:text-left rounded-3xl bg-clip-text c-space">
+    <div className="z-10 text-center rounded-3xl bg-clip-text c-space">
       {/* Desktop View */}
-      <div className="hidden md:flex flex-col">
+      <div className="hidden md:flex flex-col items-center">
         <motion.h1
           className="text-5xl font-medium"
           variants={variants}
@@ -22,9 +22,9 @@ const HeroText = () => {
           Hi I'm Binay
         </motion.h1>
 
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-center">
           <motion.p
-            className="text-6xl font-medium text-neutral-300"
+            className="text-6xl font-medium text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -46,7 +46,7 @@ const HeroText = () => {
           </motion.div>
 
           <motion.p
-            className="text-5xl font-medium text-neutral-300"
+            className="text-5xl font-medium text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -56,7 +56,7 @@ const HeroText = () => {
           </motion.p>
 
           <motion.div
-            className="mt-8 pb-4"
+            className="mt-8 pb-4 flex justify-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -77,7 +77,7 @@ const HeroText = () => {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden flex flex-col space-y-4">
+      <div className="md:hidden flex flex-col items-center space-y-4">
         <motion.p
           className="text-4xl font-medium"
           variants={variants}
@@ -88,9 +88,9 @@ const HeroText = () => {
           Hi, I'm Binay
         </motion.p>
 
-        <div>
+        <div className="flex flex-col items-center">
           <motion.p
-            className="text-4xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -112,7 +112,7 @@ const HeroText = () => {
           </motion.div>
 
           <motion.p
-            className="text-4xl font-black text-neutral-300"
+            className="text-4xl font-black text-neutral-300 text-center"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -122,7 +122,7 @@ const HeroText = () => {
           </motion.p>
 
           <motion.div
-            className="mt-8 pb-4"
+            className="mt-8 pb-4 flex justify-center"
             variants={variants}
             initial="hidden"
             animate="visible"
