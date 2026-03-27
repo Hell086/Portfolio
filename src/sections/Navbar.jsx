@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import menuIcon from "../assets/menu.svg";
+import closeIcon from "../assets/close.svg";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -43,7 +45,7 @@ const Navbar = () => {
               aria-expanded={isOpen}
             >
               <img
-                src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
+                src={isOpen ? closeIcon : menuIcon}
                 className="w-6 h-6"
                 alt="toggle"
               />
