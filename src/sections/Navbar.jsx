@@ -43,7 +43,7 @@ const Navbar = () => {
               aria-expanded={isOpen}
             >
               <img
-                src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+                src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
                 className="w-6 h-6"
                 alt="toggle"
               />
