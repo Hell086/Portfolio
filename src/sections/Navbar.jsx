@@ -35,8 +35,10 @@ const Navbar = () => {
           </a>
 
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-secondary hover:text-blue-500 focus:outline-none sm:hidden"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="flex cursor-pointer text-secondary hover:text-blue-500 focus:outline-none sm:hidden z-30"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
@@ -51,15 +53,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
+            key="mobile-menu"
             className="block overflow-hidden text-center sm:hidden"
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
             style={{ maxHeight: "100vh" }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
           >
             <nav className="pb-5">
               <Navigation onLinkClick={() => setIsOpen(false)} />
