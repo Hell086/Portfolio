@@ -99,7 +99,7 @@ const ProjectOverview = () => {
       <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
         {project.img ? (
           <motion.img
-            src={project.img}
+            src={project.heroImg || project.img}
             alt={project.title}
             className="w-full h-full object-cover"
             initial={{ scale: 1.08 }}
