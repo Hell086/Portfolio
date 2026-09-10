@@ -18,12 +18,15 @@ export const mySocials = [
 
 export const experiences = [
    {
-    worked: "Freelance",
-    job: "Artist",
-    date: "2018-Present",
+    worked: "In Project Abhaya",
+    job: "UI/UX & Graphic Designer (Internship)",
+    date: "Aug 25 - Dec 25 2025",
     contents: [
-      "I began my professional artistic journey in 2018, focusing on commission-based artworks that allowed me to connect directly with collectors and art enthusiasts. Over time, I expanded my practice, creating not only personal work but also mural artworks that brought spaces to life with colors, form, and storytelling. Each piece I created was a step in refining my style and understanding what resonates with people.",
-      "Along the way, I collaborated with fellow artists on various projects, exchanging ideas and pushing creative boundaries. Through selling my art and completing commissions, I was able to turn my passion into a sustainable career while building a supportive community that follows and values my artistic growth. This journey has been a blend of exploration, collaboration, and dedication, shaping me into the professional artist I am today.",
+      "Designed the official Project Abhaya website with a focus on usability and clarity.",
+      "Worked from wireframes to final visual design to ensure a clean and consistent interface.",
+      "Created graphic design posters for social media to support campaigns and digital communication.",
+      "Collaborated with the team to translate ideas into clean, purpose-driven visual designs.",
+      "Used Figma and Photoshop to bring the ideas of Project Abhaya to life.",
     ],
   },
     {
@@ -37,18 +40,6 @@ export const experiences = [
     ],
   },
     {
-    worked: "In Project Abhaya",
-    job: "UI/UX & Graphic Designer (Internship)",
-    date: "Aug 25 - Dec 25 2025",
-    contents: [
-      "Designed the official Project Abhaya website with a focus on usability and clarity.",
-      "Worked from wireframes to final visual design to ensure a clean and consistent interface.",
-      "Created graphic design posters for social media to support campaigns and digital communication.",
-      "Collaborated with the team to translate ideas into clean, purpose-driven visual designs.",
-      "Used Figma and Photoshop to bring the ideas of Project Abhaya to life.",
-    ],
-  },
-  {
     worked: "In Milan Tara",
     job: "Graphic Designer",
     date: "2024-2025",
@@ -56,6 +47,15 @@ export const experiences = [
       "Designed visual templates for Starmap and Momentmap, maintaining brand consistency and visual clarity.",
       "Created reusable design systems and layouts in Adobe Illustrator to support product presentation and marketing needs.",
       "Worked closely with the team to refine designs based on product requirements and feedback.",
+    ],
+  },
+  {
+    worked: "Freelance",
+    job: "Artist",
+    date: "2018-Present",
+    contents: [
+      "I began my professional artistic journey in 2018, focusing on commission-based artworks that allowed me to connect directly with collectors and art enthusiasts. Over time, I expanded my practice, creating not only personal work but also mural artworks that brought spaces to life with colors, form, and storytelling. Each piece I created was a step in refining my style and understanding what resonates with people.",
+      "Along the way, I collaborated with fellow artists on various projects, exchanging ideas and pushing creative boundaries. Through selling my art and completing commissions, I was able to turn my passion into a sustainable career while building a supportive community that follows and values my artistic growth. This journey has been a blend of exploration, collaboration, and dedication, shaping me into the professional artist I am today.",
     ],
   }, 
 ];
