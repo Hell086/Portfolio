@@ -116,7 +116,7 @@ export const Timeline = ({ data }) => {
             className="px-6 py-3 hover:cursor-pointer rounded-full bg-accent text-white hover:bg-blue-400 font-semibold"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open("/resume.pdf", "_blank")}
+            onClick={() => window.open("/Binay_Shrestha_CV.pdf", "_blank")}
           >
             View Resume
           </motion.button>
