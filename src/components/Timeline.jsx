@@ -118,7 +118,7 @@ export const Timeline = ({ data }) => {
             whileTap={{ scale: 0.95 }}
             onClick={() => window.open("/Binay_Shrestha_CV.pdf", "_blank")}
           >
-            View CV
+            View My CV
           </motion.button>
       </div>
     </div>
