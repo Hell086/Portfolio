@@ -5,6 +5,8 @@ import { projects } from "../constants";
 
 const Project = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const activeProjects = projects[activeTab] || [];
+  const hasSingleProject = activeProjects.length === 1;
 
   const tabs = [
     { id: "all", label: "Featured Work" },
@@ -35,8 +37,14 @@ const Project = () => {
       />
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 gap-4 mt-10 md:grid-cols-6 md:auto-rows-[18rem]">
-        {projects[activeTab]?.map((project) => (
+      <div
+        className={`grid grid-cols-1 gap-4 mt-10 md:auto-rows-[18rem] ${
+          hasSingleProject
+            ? "md:grid-cols-12 projects-grid-single"
+            : "md:grid-cols-6"
+        }`}
+      >
+        {activeProjects.map((project) => (
           <Card
             key={project.id}
             project={project}

@@ -1,38 +1,26 @@
 import {useState} from "react";
 import {motion} from "motion/react";
-function Navigation()
+import { Link } from "react-router-dom";
+
+function Navigation({ onNavigate })
 {
+    const navigationItems = [
+        { label: "Home", id: "home" },
+        { label: "About", id: "about" },
+        { label: "Services", id: "services" },
+        { label: "Projects", id: "projects" },
+        { label: "Contact", id: "contact" },
+    ];
+
     return (
         <ul className="nav-ul">
-            <li className="nav-li">
-                <a className="nav-link" href="#home">
-                    Home
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#about">
-                    About
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#services">
-                    Services
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#projects">
-                    Projects
-                </a>
-            </li>
-
-            <li className="nav-li">
-                <a className="nav-link" href="#contact">
-                    Contact
-                </a>
-            </li>
+            {navigationItems.map(({ label, id }) => (
+                <li key={id} className="nav-li">
+                    <Link className="nav-link" to={`/#${id}`} onClick={onNavigate}>
+                        {label}
+                    </Link>
+                </li>
+            ))}
         </ul>
     )
 }
@@ -44,19 +32,19 @@ const Navbar = () => {
     <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between
         py-2 sm:py-0">
-            <a 
-            href="/"
+            <Link
+            to="/#home"
             className="text-xl font-bold transition-colors text-secondary">
                 BINAY
-            </a>
+            </Link>
             <button 
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer text-secondary
             hover:text-blue-500 focus:outline-non sm:hidden">
-                <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} className="w-6 h-6" alt="toggle"/>
+                <img src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"} className="w-6 h-6" alt="toggle"/>
             </button>
             <nav className="hidden sm:flex">
-                <Navigation />
+                <Navigation onNavigate={() => setIsOpen(false)} />
             </nav>
             </div>
     </div>
@@ -69,7 +57,7 @@ const Navbar = () => {
     transition={{ duration: 1}}
     >
         <nav className="pb-5">
-            <Navigation />
+            <Navigation onNavigate={() => setIsOpen(false)} />
         </nav>
     </motion.div>
     )}

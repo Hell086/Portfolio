@@ -131,6 +131,12 @@ body {
   @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden;
 }
 
+@media (min-width: 768px) {
+  .projects-grid-single > * {
+    grid-column: 4 / span 6;
+  }
+}
+
 /* Grid Color Themes */
 .grid-default-color {
   @apply p-6 border-2 border-spanishgray from-whitesmoke to-white rounded-2xl shadow-sm;

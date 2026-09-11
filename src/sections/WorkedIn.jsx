@@ -2,17 +2,17 @@ import React, { useRef } from 'react';
 
 const orgs = [
   {
-    name: 'Bits & Circuits',
-    logo: '/assets/logos/Bits-01.jpg',
+    name: 'Milan Tara',
+    logo: '/assets/logos/Milan Tara.png',
   },
   {
     name: 'Project Abhaya',
     logo: '/assets/logos/Abhaya logo.png',
   },
-  {
-    name: 'Wind Designs',
-    logo: '/assets/logos/wind-01.svg',
-  },
+  // {
+  //   name: 'Wind Designs',
+  //   logo: '/assets/logos/wind-01.svg',
+  // },
 ];
 
 const WorkedIn = () => {

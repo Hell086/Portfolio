@@ -46,7 +46,7 @@ const ProjectGallery = ({ images = [], title, label = 'Final work' }) => {
   const renderGrid = () => {
     if (allImages.length === 1) {
       return (
-        <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
+        <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden cursor-zoom-in border border-neutral-300 bg-white shadow-sm" onClick={() => openLightbox(0)}>
           <img src={allImages[0].src} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
         </div>
       );
@@ -56,7 +56,7 @@ const ProjectGallery = ({ images = [], title, label = 'Final work' }) => {
       return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {allImages.map((img, i) => (
-            <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i)}>
+            <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden cursor-zoom-in border border-neutral-300 bg-white shadow-sm" onClick={() => openLightbox(i)}>
               <img src={img.src} alt={`${title} ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
@@ -64,56 +64,29 @@ const ProjectGallery = ({ images = [], title, label = 'Final work' }) => {
       );
     }
 
-    if (allImages.length === 4) {
-      return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-3 sm:aspect-[16/10]">
-          <div className="aspect-[4/3] sm:aspect-auto sm:row-span-2 min-h-0 rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
-            <img src={allImages[0].src} alt={`${title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-          </div>
-          {allImages.slice(1).map((img, i) => (
-            <div key={i} className="aspect-[4/3] sm:aspect-auto min-h-0 rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i + 1)}>
-              <img src={img.src} alt={`${title} ${i + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-            </div>
-          ))}
-        </div>
-      );
-    }
-
-    // 4+ images: masonry-style grid with "View all" overlay on last
-    const visibleImages = allImages.slice(0, 3);
-    const remaining = allImages.length - 3;
+    // 3+ images: keep a balanced preview while the lightbox provides every image.
+    const previewImages = allImages.slice(0, 3);
+    const remaining = allImages.length - previewImages.length;
 
     return (
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-        {/* Large featured first image */}
-        <div className="col-span-2 md:col-span-2 aspect-video rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
-          <img src={visibleImages[0].src} alt={`${title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-3 sm:aspect-[16/10]">
+        <div className="aspect-[4/3] sm:aspect-auto sm:row-span-2 min-h-0 rounded-2xl overflow-hidden cursor-zoom-in border border-neutral-300 bg-white shadow-sm" onClick={() => openLightbox(0)}>
+          <img src={previewImages[0].src} alt={`${title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
         </div>
 
-        {/* Side images */}
-        {visibleImages.slice(1, 3).map((img, i) => (
-          <div key={i} className="aspect-square rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i + 1)}>
+        {previewImages.slice(1).map((img, i) => (
+          <div key={i} className="aspect-[4/3] sm:aspect-auto min-h-0 rounded-2xl overflow-hidden cursor-zoom-in relative border border-neutral-300 bg-white shadow-sm" onClick={() => openLightbox(i + 1)}>
             <img src={img.src} alt={`${title} ${i + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-          </div>
-        ))}
-
-        {/* Bottom row */}
-        {visibleImages[3] && (
-          <div
-            className="aspect-video rounded-2xl overflow-hidden cursor-zoom-in relative"
-            onClick={() => openLightbox(3)}
-          >
-            <img src={visibleImages[3].src} alt={`${title} 4`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-            {remaining > 0 && (
+            {i === previewImages.length - 2 && remaining > 0 && (
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center rounded-2xl">
                 <div className="text-center">
                   <p className="text-white text-3xl font-black">+{remaining}</p>
-                  <p className="text-white/70 text-sm mt-1">more photos</p>
+                  <p className="text-white/70 text-sm mt-1">more images</p>
                 </div>
               </div>
             )}
           </div>
-        )}
+        ))}
       </div>
     );
   };
