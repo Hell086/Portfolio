@@ -1,15 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
-const ProjectGallery = ({ images = [], coverImage, title }) => {
+const ProjectGallery = ({ images = [], title, label = 'Final work' }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Build full gallery: cover image first, then subImages
-  const allImages = [
-    ...(coverImage ? [{ src: coverImage, label: 'Cover' }] : []),
-    ...images.map((src, i) => ({ src, label: `Image ${i + 1}` })),
-  ];
+  const allImages = images.map((src, i) => ({ src, label: `Image ${i + 1}` }));
 
   const openLightbox = (index) => {
     setActiveIndex(index);
@@ -50,7 +46,7 @@ const ProjectGallery = ({ images = [], coverImage, title }) => {
   const renderGrid = () => {
     if (allImages.length === 1) {
       return (
-        <div className="w-full aspect-video rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
+        <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
           <img src={allImages[0].src} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
         </div>
       );
@@ -58,9 +54,9 @@ const ProjectGallery = ({ images = [], coverImage, title }) => {
 
     if (allImages.length === 2) {
       return (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {allImages.map((img, i) => (
-            <div key={i} className="aspect-video rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i)}>
+            <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i)}>
               <img src={img.src} alt={`${title} ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
@@ -68,14 +64,14 @@ const ProjectGallery = ({ images = [], coverImage, title }) => {
       );
     }
 
-    if (allImages.length === 3) {
+    if (allImages.length === 4) {
       return (
-        <div className="grid grid-cols-2 gap-3">
-          <div className="row-span-2 rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-3 sm:aspect-[16/10]">
+          <div className="aspect-[4/3] sm:aspect-auto sm:row-span-2 min-h-0 rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(0)}>
             <img src={allImages[0].src} alt={`${title} 1`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           {allImages.slice(1).map((img, i) => (
-            <div key={i} className="aspect-video rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i + 1)}>
+            <div key={i} className="aspect-[4/3] sm:aspect-auto min-h-0 rounded-2xl overflow-hidden cursor-zoom-in" onClick={() => openLightbox(i + 1)}>
               <img src={img.src} alt={`${title} ${i + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
@@ -84,8 +80,8 @@ const ProjectGallery = ({ images = [], coverImage, title }) => {
     }
 
     // 4+ images: masonry-style grid with "View all" overlay on last
-    const visibleImages = allImages.slice(0, 4);
-    const remaining = allImages.length - 4;
+    const visibleImages = allImages.slice(0, 3);
+    const remaining = allImages.length - 3;
 
     return (
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -126,7 +122,7 @@ const ProjectGallery = ({ images = [], coverImage, title }) => {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xs font-semibold text-neutral-400 uppercase tracking-widest">
-          Gallery · {allImages.length} {allImages.length === 1 ? 'image' : 'images'}
+          {label} · {allImages.length} {allImages.length === 1 ? 'image' : 'images'}
         </h3>
         {allImages.length > 1 && (
           <button

@@ -109,7 +109,7 @@ export const projects = {
       id: 1,
       title: "Kumari: The Living Goddess",
       category: "Painting",
-      img: "assets/projects/kumari_1.jpeg",
+      img: "/assets/projects/kumari_1.jpeg",
       heroImg: "/assets/projects/Kumari_hero.jpeg",
       gridClass: "grid-1",
       description: "A beautiful portrayal of the Living Goddess tradition in Nepal, capturing the essence of this sacred cultural practice.",
@@ -117,13 +117,16 @@ export const projects = {
       tags: ["Acrylic Color", "Canvas",],
       year: "2024",
       role: "Artist",
-      subImages: [],
+      subImages: [
+        "/assets/projects/Kumari_hero.jpeg",
+        "/assets/projects/Kumari.jpeg",
+      ],
     },
     {
       id: 2,
       title: "Web Design:",
       category: "UI/UX",
-      img: "/assets/projects/Abhaya.png",
+      img: "/assets/projects/Project Abhaya/Abhaya.png",
       gridClass: "grid-2",
       description: "Complete website design for Project Abhaya focusing on user experience and accessibility.",
       longDescription: "Project Abhaya is a social initiative focused on spreading awareness and support for abuse survivors in Nepal. I was responsible for the end-to-end website design — starting from user research and wireframing to high-fidelity prototypes and final handoff. The design prioritizes clarity, emotional safety, and ease of navigation so that visitors in distress can find resources quickly. The color palette was intentionally calming, and typography choices were made to ensure readability across all devices. This project was built in Figma and later implemented with developer collaboration.",
@@ -131,7 +134,13 @@ export const projects = {
       year: "2025",
       role: "UI/UX Designer",
       href: "",
-      subImages: [],
+      projectLink: "https://www.figma.com/design/iaHK2wJ0BuId9qZEaIp3mZ/Abhaya-Web-design?node-id=0-1&t=SeVTt5pfspZQezZP-1",
+      subImages: [
+        "/assets/projects/Project Abhaya/PAherosection.png",
+        "/assets/projects/Project Abhaya/PAjourney.png",
+        "/assets/projects/Project Abhaya/PAelearning.png",
+        
+      ],
     },
     {
       id: 3,
@@ -170,7 +179,7 @@ export const projects = {
       tags: ["Illustrator", "Branding", "Typography", "Packaging"],
       year: "2024",
       role: "Brand Designer",
-      subImages: [],
+      subImages: ["/assets/projects/W.png"],
     },
   ],
 
@@ -188,13 +197,12 @@ export const projects = {
       year: "2024",
       role: "Artist",
       subImages: [
-  '/assets/projects/kumari_2.jpg',
-  '/assets/projects/kumari_3.jpg',
-  '/assets/projects/kumari_4.jpg',
-],
+        "/assets/projects/Kumari_hero.jpeg",
+        "/assets/projects/Kumari.jpeg",
+      ],
     },
     {
-      id: 3,
+      id: 13,
       title: "Uljhan",
       category: "Painting",
       img: "/assets/projects/uljhan.jpg",
@@ -204,11 +212,7 @@ export const projects = {
       tags: ["Oil", "Mixed Media", "Abstract", "Texture"],
       year: "2023",
       role: "Artist",
-      subImages: [
-  '/assets/projects/kumari_2.jpg',
-  '/assets/projects/kumari_3.jpg',
-  '/assets/projects/kumari_4.jpg',
-],
+      subImages: [],
     },
     {
       id: 6,
@@ -239,6 +243,7 @@ export const projects = {
       year: "2025",
       role: "UI/UX Designer",
       href: "",
+      projectLink: "https://www.figma.com/design/iaHK2wJ0BuId9qZEaIp3mZ/Abhaya-Web-design?node-id=0-1&t=SeVTt5pfspZQezZP-1",
       subImages: [],
     },
     {
@@ -253,6 +258,7 @@ export const projects = {
       tags: ["Figma", "Mobile UI", "UX Research", "Prototyping"],
       year: "2024",
       role: "UI/UX Designer",
+      projectLink: "",
       subImages: [],
     },
     {
@@ -267,6 +273,7 @@ export const projects = {
       tags: ["Figma", "Data Viz", "Dashboard", "Dark Mode"],
       year: "2024",
       role: "UI/UX Designer",
+      projectLink: "",
       subImages: [],
     },
   ],
