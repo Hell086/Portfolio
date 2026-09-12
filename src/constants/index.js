@@ -160,7 +160,7 @@ export const projects = {
     },
     {
       id: 7,
-      title: "PS exploration",
+      title: "Ps exploration",
       category: "Digital Art",
       img: "/assets/projects/Digital Art/flower.png",
       gridClass: "grid-3",
@@ -170,7 +170,7 @@ export const projects = {
       year: "2026",
       //role: "3D Animator",
       caseStudyContent: {
-        conceptStory: { title: "Concept & Story", content: "After moving to **Adobe Photoshop**, I focused on becoming familiar with its interface and digital drawing tools. Instead of immediately working with colors, I used this stage to practice creating **sketches and clean outlines**, allowing me to understand brushes, layers, and basic workflow. This approach helped me become more comfortable with Photoshop and build a stronger foundation before moving into more detailed and fully colored digital artworks." },
+        conceptStory: { title: "Concept & Story", content: "After moving to Adobe Photoshop, I focused on becoming familiar with its interface and digital drawing tools. Instead of immediately working with colors, I used this stage to practice creating sketches and clean outlines, allowing me to understand brushes, layers, and basic workflow. This approach helped me become more comfortable with Photoshop and build a stronger foundation before moving into more detailed and fully colored digital artworks." },
         //creativeDirection: { title: "Creative Direction", content: "The focus was recreating the sense of speed through details such as tire deformation, heat shimmer, and aerodynamic movement." },
         //visualDirection: { title: "Visual Direction", content: "Motion blur, depth of field, chromatic aberration, HDRI lighting, and the car's rear-wing movement shape the final visual language." },
         //animationProcess: { title: "Animation Process", content: "The animation was developed in Blender with Cycles rendering, then composited in After Effects to refine the final image." },
@@ -181,6 +181,7 @@ export const projects = {
         "/assets/projects/Digital Art/flower.png",
         "/assets/projects/Digital Art/key.png",
         "/assets/projects/Digital Art/learn.png",
+        "/assets/projects/Digital Art/Artpasal.png",
       ],
     },
     
@@ -329,7 +330,7 @@ export const projects = {
       year: "2026",
       //role: "3D Animator",
       caseStudyContent: {
-        conceptStory: { title: "Concept & Story", content: "When I started learning digital art, I used **Adobe Fresco** to explore and practice digital illustration. These artworks were created with references from Pinterest and helped me understand the fundamentals of digital art. Through the process, I learned how to work with **layers, lighting, shadows, and depth**, while experimenting with different brushes and techniques. These early experiments gave me a strong foundation in digital art and helped me build confidence in developing my own digital artwork." },
+        conceptStory: { title: "Concept & Story", content: "When I started learning digital art, I used Adobe Fresco to explore and practice digital illustration. These artworks were created with references from Pinterest and helped me understand the fundamentals of digital art. Through the process, I learned how to work with layers, lighting, shadows, and depth, while experimenting with different brushes and techniques. These early experiments gave me a strong foundation in digital art and helped me build confidence in developing my own digital artwork." },
         //creativeDirection: { title: "Creative Direction", content: "The focus was recreating the sense of speed through details such as tire deformation, heat shimmer, and aerodynamic movement." },
         //visualDirection: { title: "Visual Direction", content: "Motion blur, depth of field, chromatic aberration, HDRI lighting, and the car's rear-wing movement shape the final visual language." },
         //animationProcess: { title: "Animation Process", content: "The animation was developed in Blender with Cycles rendering, then composited in After Effects to refine the final image." },
@@ -354,7 +355,7 @@ export const projects = {
       year: "2026",
       //role: "3D Animator",
       caseStudyContent: {
-        conceptStory: { title: "Concept & Story", content: "After moving to **Adobe Photoshop**, I focused on becoming familiar with its interface and digital drawing tools. Instead of immediately working with colors, I used this stage to practice creating **sketches and clean outlines**, allowing me to understand brushes, layers, and basic workflow. This approach helped me become more comfortable with Photoshop and build a stronger foundation before moving into more detailed and fully colored digital artworks." },
+        conceptStory: { title: "Concept & Story", content: "After moving to Adobe Photoshop, I focused on becoming familiar with its interface and digital drawing tools. Instead of immediately working with colors, I used this stage to practice creating sketches and clean outlines, allowing me to understand brushes, layers, and basic workflow. This approach helped me become more comfortable with Photoshop and build a stronger foundation before moving into more detailed and fully colored digital artworks." },
         //creativeDirection: { title: "Creative Direction", content: "The focus was recreating the sense of speed through details such as tire deformation, heat shimmer, and aerodynamic movement." },
         //visualDirection: { title: "Visual Direction", content: "Motion blur, depth of field, chromatic aberration, HDRI lighting, and the car's rear-wing movement shape the final visual language." },
         //animationProcess: { title: "Animation Process", content: "The animation was developed in Blender with Cycles rendering, then composited in After Effects to refine the final image." },
