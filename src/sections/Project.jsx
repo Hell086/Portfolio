@@ -12,8 +12,8 @@ const Project = () => {
     { id: "all", label: "Featured Work" },
     { id: "painting", label: "Painting" },
     { id: "ui-ux", label: "UI/UX Design" },
-    { id: "animation", label: "Animation" },
-    { id: "motion", label: "Motion Graphics" },
+    { id: "digital art", label: "Digital Art" },
+    { id: "motion", label: "Animation & Motion Graphics" },
     { id: "graphics", label: "Graphics Design" },
   ];
 

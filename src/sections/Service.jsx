@@ -4,11 +4,11 @@ const Service = () => {
   return (
     <section className="services-section" id="services">
       {/* Pills */}
-      <span className="services-pill pill-top">Acrylic Painting</span>
+      <span className="services-pill pill-top">Digital Art</span>
       <span className="services-pill pill-left">UI/UX Design</span>
       <span className="services-pill pill-right">Graphic Design</span>
-      <span className="services-pill pill-bottom-left">Motion Graphics</span>
-      <span className="services-pill pill-bottom-right">Animation</span>
+      <span className="services-pill pill-bottom-left">Animation & Motion Graphics</span>
+      <span className="services-pill pill-bottom-right">Acrylic Painting</span>
 
       {/* Center Content */}
       <div className="services-center" >
